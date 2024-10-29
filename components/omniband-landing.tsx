@@ -1,6 +1,8 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Ticket } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -20,6 +22,7 @@ export function OmnibandLanding() {
         </div>
         <nav className="space-x-4">
           <a href="#about" className="hover:underline">About Us | 关于我们</a>
+          <a href="#tickets" className="hover:underline">Tickets | 购票</a>
         </nav>
       </header>
 
@@ -27,14 +30,9 @@ export function OmnibandLanding() {
         <section className="py-20 text-center bg-gradient-to-b from-gray-900 to-black">
           <h1 className="text-5xl font-bold mb-6">OmniBand | 牛津热音社</h1>
           <p className="text-xl mb-8">Where Passion Meets Music | 激情与音乐的交汇</p>
-          <div className="flex space-x-4 justify-center"> {/* Add a container with flex and space-x-4 */}
-            <Link href="https://wj.qq.com/r/login.html?s_url=https%3A%2F%2Fwj.qq.com%2Fs2%2F15004374%2F09e4%2F&sid=15004374&hash=09e4&login_type=unite&scene_type=respondent" passHref>
-              <Button className="bg-white text-black hover:bg-gray-200">Join Us | 加入我们</Button>
-            </Link>
-            <Link href="https://wj.qq.com/r/login.html?s_url=https%3A%2F%2Fwj.qq.com%2Fs2%2F15004374%2F09e4%2F&sid=15004374&hash=09e4&login_type=unite&scene_type=respondent" passHref>
-              <Button className="bg-white text-black hover:bg-gray-200">Get Your Tickets | 购买门票</Button>
-            </Link>
-          </div>
+          <Link href="https://wj.qq.com/r/login.html?s_url=https%3A%2F%2Fwj.qq.com%2Fs2%2F15004374%2F09e4%2F&sid=15004374&hash=09e4&login_type=unite&scene_type=respondent" passHref>
+            <Button className="bg-white text-black hover:bg-gray-200">Join Us | 加入我们</Button>
+          </Link>
         </section>
 
         <section id="about" className="py-20 bg-black">
@@ -57,6 +55,48 @@ export function OmnibandLanding() {
                 height={400}
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
+            </div>
+          </div>
+        </section>
+
+        <section id="tickets" className="py-24 sm:py-32 relative">
+          <div className="container mx-auto px-4 relative">
+            <div className="max-w-2xl mx-auto text-center">
+              <h1 className="text-3xl font-bold mb-4">Tickets | 购票</h1>
+
+              <Card className="p-8 bg-primary/10 border border-gray-300 shadow-[0_0_30px_-5px] shadow-primary/30 mt-8">
+                <h2 className="text-2xl text-white font-bold mb-8">🍂 Autumn Acoustic Tickets </h2>
+                <div className="space-y-6 text-left">
+                  <div className="space-y-2">
+                    <h3 className="text-gray-300 font-bold mb-8m">📆 Date and Time</h3>
+                    <p className="text-gray-300">November 16th (W5 Saturday) 7pm</p>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-gray-300 font-bold mb-8m">⛪️ Venue</h3>
+                    <p className="text-gray-300">Trinity College Auditorium (Garden Room)</p>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-gray-300 font-bold mb-8m">🎟️ Pricing</h3>
+                    <ul className="space-y-2 text-gray-300">
+                      <li className="flex justify-between items-center">
+                        <span>Early Bird (Before Nov 10th)</span>
+                        <span className="font-medium">GBP 5.99 / RMB 55</span>
+                      </li>
+                      <li className="flex justify-between items-center">
+                        <span>Full Price</span>
+                        <span className="font-medium">GBP 7.99 / RMB 75</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <Link
+                  href="https://forms.gle/2UCYPsfyNFfGQ1uv5"
+                  className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium transition-colors"
+                >
+                  <Ticket className="w-5 h-5" />
+                  Book Now | 立即购票
+                </Link>
+              </Card>
             </div>
           </div>
         </section>
