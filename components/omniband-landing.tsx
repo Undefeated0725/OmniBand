@@ -90,11 +90,11 @@ export function OmnibandLanding() {
                   </div>
                 </div>
                 <Link
-                  href="https://forms.gle/2UCYPsfyNFfGQ1uv5"
+                  href="/pdfs/autumn_acoustic_setlist.pdf"
                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium transition-colors"
                 >
                   <Ticket className="w-5 h-5" />
-                  Book Now | 立即购票
+                  Setlist | 节目单
                 </Link>
               </Card>
             </div>
